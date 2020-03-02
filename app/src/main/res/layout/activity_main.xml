@@ -42,24 +42,24 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="0dp"
-                    app:srcCompat="@drawable/bg" />
+                    app:srcCompat="@drawable/nail_bg" />
 
                 <RelativeLayout
-                    android:id="@+id/salon_name"
+                    android:id="@+id/nailpulish_name"
                     android:layout_width="wrap_content"
-                    android:layout_height="47dp"
+                    android:layout_height="68dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="37dp"
-                    android:layout_marginLeft="37dp"
-                    android:layout_marginTop="22dp"
-                    android:layout_marginEnd="42dp"
-                    android:layout_marginRight="42dp"
-                    android:layout_marginBottom="507dp">
+                    android:layout_marginStart="46dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="498dp">
 
                     <TextView
                         android:id="@+id/textView3"
@@ -71,10 +71,11 @@
                         android:layout_marginRight="59dp"
                         android:layout_marginBottom="0dp"
                         android:gravity="center"
-                        android:text="Barber Salon"
-                        android:textColor="#6244A5"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:text="Nailed it "
+                        android:textColor="#F354A6"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/bungee_shade" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -129,7 +130,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/haircut_style"
+                        android:id="@+id/polish_option"
                         android:layout_width="189dp"
                         android:layout_height="28dp"
                         android:layout_alignParentStart="true"
@@ -144,7 +145,7 @@
                         android:layout_marginEnd="193dp"
                         android:layout_marginRight="193dp"
                         android:layout_marginBottom="378dp"
-                        android:text="Choose haircut"
+                        android:text="Choose nail polish"
                         android:textColor="#0E0800"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -164,10 +165,11 @@
                         android:layout_marginTop="134dp"
                         android:layout_marginEnd="209dp"
                         android:layout_marginRight="209dp"
-                        android:layout_marginBottom="347dp" />
+                        android:layout_marginBottom="347dp"
+                        android:entries="@array/nail_option"/>
 
                     <TextView
-                        android:id="@+id/current_haircut"
+                        android:id="@+id/color_chooise"
                         android:layout_width="303dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
@@ -186,10 +188,10 @@
                         android:textColor="#FA0C0000"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        tools:text="Upload your current haircut" />
+                        tools:text="Choose a color" />
 
                     <RelativeLayout
-                        android:id="@+id/Upload_image"
+                        android:id="@+id/Upload_color"
                         android:layout_width="203dp"
                         android:layout_height="181dp"
                         android:layout_alignParentStart="true"
@@ -216,7 +218,7 @@
                         android:id="@+id/Gallery"
                         android:layout_width="310dp"
                         android:layout_height="32dp"
-                        android:layout_alignTop="@id/Upload_image"
+                        android:layout_alignTop="@id/Upload_color"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
@@ -301,6 +303,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/custom_button"
                     android:text="NEXT"
+                    android:textColor="#FFF"
                     android:textStyle="bold" />
             </RelativeLayout>
 
