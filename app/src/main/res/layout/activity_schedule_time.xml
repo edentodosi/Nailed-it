@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@drawable/repeating"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -31,18 +31,6 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="0dp">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="0dp"
-                    app:srcCompat="@drawable/nail_bg" />
 
                 <RelativeLayout
                     android:id="@+id/deatails"
@@ -74,6 +62,20 @@
                             android:layout_marginEnd="149dp"
                             android:layout_marginRight="149dp"
                             android:text="The finall cost:"
+                            android:textColor="#FB090000"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/finall_price"
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/finall_cost"
+                            android:layout_alignRight="@+id/finall_cost"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginEnd="-86dp"
+                            android:layout_marginRight="-86dp"
                             android:textColor="#FB090000"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -130,7 +132,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="37dp"
                                 android:layout_marginRight="37dp"
-                                android:background="@android:color/background_dark"
+                                android:background="@color/colorAccent"
                                 app:srcCompat="@android:drawable/ic_menu_my_calendar" />
                         </RelativeLayout>
 
@@ -166,18 +168,19 @@
 
                             <ImageButton
                                 android:id="@+id/clock"
-                                android:layout_width="82dp"
-                                android:layout_height="51dp"
+                                android:layout_width="72dp"
+                                android:layout_height="49dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentEnd="true"
                                 android:layout_alignParentRight="true"
-                                android:layout_marginStart="274dp"
-                                android:layout_marginLeft="274dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginEnd="18dp"
-                                android:layout_marginRight="18dp"
+                                android:layout_marginStart="275dp"
+                                android:layout_marginLeft="275dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="26dp"
+                                android:layout_marginRight="26dp"
+                                android:background="@color/colorAccent"
                                 app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
                         </RelativeLayout>
 
@@ -240,7 +243,7 @@
                     android:layout_marginRight="19dp">
 
                     <TextView
-                        android:id="@+id/getname"
+                        android:id="@+id/clientName"
                         android:layout_width="122dp"
                         android:layout_height="41dp"
                         android:layout_alignParentStart="true"
