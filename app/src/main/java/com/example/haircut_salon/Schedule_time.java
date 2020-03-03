@@ -27,14 +27,14 @@ public class Schedule_time extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_time);
         button= (Button) findViewById(R.id.button);
-        tv=findViewById(R.id.clientName);
+        tv=findViewById(R.id.client_title_name);
         st=getIntent().getStringExtra("value");
-        tv.setText(st);
+        tv.setText("Hey " +st +", pick your wanted time");
 
-        TextView priceTv = findViewById(R.id.finall_price);
+        TextView priceTv = findViewById(R.id.order_price);
         int nailType=getIntent().getIntExtra("nailPolish", 0);
         int price = nailOptions[nailType].getPrice();
-        priceTv.setText(String.valueOf(price));
+        priceTv.setText("Order price: " +String.valueOf(price));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

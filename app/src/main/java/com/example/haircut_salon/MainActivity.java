@@ -28,15 +28,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState)   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Spinner spinner_nail=findViewById(R.id.spinner);
+        Spinner spinner_nail=findViewById(R.id.nail_type_spinner);
         spinner_nail.setSelection(0);
         spinner_nail.setOnItemSelectedListener(this);
-        button= (Button) findViewById(R.id.button);
-        et= findViewById(R.id.putnamehere);
+        button= (Button) findViewById(R.id.next_button);
+        et= findViewById(R.id.client_name_input);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
+                Spinner mySpinner = (Spinner) findViewById(R.id.nail_type_spinner);
                 int nailPolishType = mySpinner.getSelectedItemPosition();
 
                 Intent i=new Intent(MainActivity.this,Schedule_time.class);
