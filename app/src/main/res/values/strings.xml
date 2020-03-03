@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nail_it</string>
+    <string name="app_name">Nail it</string>
     <string-array name="nail_option">
         <item>Regular nail polish - 30 ILS</item>
         <item>Gel nail polish - 50 ILS</item>
