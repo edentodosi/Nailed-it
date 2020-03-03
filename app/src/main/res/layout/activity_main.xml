@@ -168,7 +168,7 @@
                 android:layout_marginTop="49dp"
                 android:layout_marginEnd="93dp"
                 android:layout_marginRight="93dp"
-                tools:srcCompat="@tools:sample/avatars[10]" />
+                tools:srcCompat="@drawable/nails_color" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

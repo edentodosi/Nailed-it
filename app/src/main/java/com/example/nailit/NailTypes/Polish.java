@@ -1,4 +1,4 @@
-package com.example.haircut_salon.NailTypes;
+package com.example.nailit.NailTypes;
 
 public class Polish implements INailOptions {
 

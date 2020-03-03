@@ -1,4 +1,4 @@
-package com.example.haircut_salon;
+package com.example.nailit;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.haircut_salon", appContext.getPackageName());
+        assertEquals("com.example.nail_it", appContext.getPackageName());
     }
 }

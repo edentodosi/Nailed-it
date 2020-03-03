@@ -1,4 +1,4 @@
-package com.example.haircut_salon;
+package com.example.nailit;
 
 import org.junit.Test;
 

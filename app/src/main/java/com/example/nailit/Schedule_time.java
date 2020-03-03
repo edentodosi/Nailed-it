@@ -1,4 +1,4 @@
-package com.example.haircut_salon;
+package com.example.nailit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,11 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.haircut_salon.NailTypes.AcrylicPolish;
-import com.example.haircut_salon.NailTypes.Gel;
-import com.example.haircut_salon.NailTypes.INailOptions;
-import com.example.haircut_salon.NailTypes.Polish;
-import com.example.haircut_salon.NailTypes.PolishRemover;
+import com.example.nailit.NailTypes.AcrylicPolish;
+import com.example.nailit.NailTypes.Gel;
+import com.example.nailit.NailTypes.INailOptions;
+import com.example.nailit.NailTypes.Polish;
+import com.example.nailit.NailTypes.PolishRemover;
 
 public class Schedule_time extends AppCompatActivity {
     private Button button;
