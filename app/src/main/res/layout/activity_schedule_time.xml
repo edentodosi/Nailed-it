@@ -4,300 +4,225 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@drawable/repeating"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="346dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:text="Let's schedule"
+        android:textColor="#F354A6"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/bungee_shade" />
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="630dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="129dp"
+            android:layout_height="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="138dp"
+            android:layout_marginLeft="138dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginRight="144dp"
+            android:layout_marginBottom="58dp"
+            android:background="@drawable/custom_button"
+            android:text="GO"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="630dp"
-            android:orientation="vertical">
+            android:id="@+id/client_name_layout"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_corner">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="576dp"
+            <TextView
+                android:id="@+id/client_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp">
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="69dp"
+                android:layout_marginRight="69dp"
+                android:textColor="#050300"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="0dp"
-                    app:srcCompat="@drawable/nail_bg" />
-
-                <RelativeLayout
-                    android:id="@+id/deatails"
-                    android:layout_width="391dp"
-                    android:layout_height="505dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="68dp">
-
-                    <RelativeLayout
-                        android:id="@+id/cost"
-                        android:layout_width="379dp"
-                        android:layout_height="52dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="453dp">
-
-                        <TextView
-                            android:id="@+id/finall_cost"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="11dp"
-                            android:layout_marginEnd="149dp"
-                            android:layout_marginRight="149dp"
-                            android:text="The finall cost:"
-                            android:textColor="#FB090000"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/info"
-                        android:layout_width="match_parent"
-                        android:layout_height="415dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="58dp">
-
-                        <RelativeLayout
-                            android:id="@+id/date"
-                            android:layout_width="383dp"
-                            android:layout_height="68dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="29dp">
-
-                            <TextView
-                                android:id="@+id/call_option"
-                                android:layout_width="261dp"
-                                android:layout_height="42dp"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginStart="4dp"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="6dp"
-                                android:layout_marginEnd="118dp"
-                                android:layout_marginRight="118dp"
-                                android:text="Please choose a date"
-                                android:textColor="#FC080000"
-                                android:textSize="24sp"
-                                android:textStyle="bold" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton"
-                                android:layout_width="72dp"
-                                android:layout_height="49dp"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="37dp"
-                                android:layout_marginRight="37dp"
-                                android:background="@android:color/background_dark"
-                                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/time"
-                            android:layout_width="374dp"
-                            android:layout_height="69dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="112dp">
-
-                            <TextView
-                                android:id="@+id/choose_time"
-                                android:layout_width="268dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginStart="6dp"
-                                android:layout_marginLeft="6dp"
-                                android:layout_marginEnd="100dp"
-                                android:layout_marginRight="100dp"
-                                android:layout_marginBottom="6dp"
-                                android:text="Please choose hour"
-                                android:textColor="#070000"
-                                android:textSize="24sp"
-                                android:textStyle="bold" />
-
-                            <ImageButton
-                                android:id="@+id/clock"
-                                android:layout_width="82dp"
-                                android:layout_height="51dp"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginStart="274dp"
-                                android:layout_marginLeft="274dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginEnd="18dp"
-                                android:layout_marginRight="18dp"
-                                app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/web"
-                            android:layout_width="377dp"
-                            android:layout_height="162dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginStart="2dp"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginBottom="30dp">
-
-                            <TextView
-                                android:id="@+id/cancellation"
-                                android:layout_width="367dp"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="0dp"
-                                android:text="I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount."
-                                android:textColor="#710E40"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <CheckBox
-                                android:id="@+id/agree"
-                                android:layout_width="126dp"
-                                android:layout_height="42dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginEnd="6dp"
-                                android:layout_marginRight="6dp"
-                                android:layout_marginBottom="4dp"
-                                android:text="agree"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </RelativeLayout>
-                    </RelativeLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/thanks"
-                    android:layout_width="357dp"
-                    android:layout_height="49dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_marginEnd="19dp"
-                    android:layout_marginRight="19dp">
-
-                    <TextView
-                        android:id="@+id/getname"
-                        android:layout_width="122dp"
-                        android:layout_height="41dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginEnd="230dp"
-                        android:layout_marginRight="230dp"
-                        android:layout_marginBottom="4dp"
-                        android:text="Hello"
-                        android:textColor="#FA0E0000"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/next"
+            <TextView
+                android:id="@+id/price_summary"
                 android:layout_width="wrap_content"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/client_title_name"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="62dp"
-                android:layout_marginLeft="62dp"
-                android:layout_marginTop="54dp"
-                android:layout_marginEnd="82dp"
-                android:layout_marginRight="82dp"
-                android:layout_marginBottom="16dp">
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="77dp"
-                    android:layout_marginLeft="77dp"
-                    android:layout_marginEnd="60dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/custom_button"
-                    android:text="GO"
-                    android:textColor="#FFF"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#050300"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
-    </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/date_picker_layout"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/client_name_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/rounded_corner">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="31dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="85dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toEndOf="@+id/date_picker_title"
+                android:layout_toRightOf="@+id/date_picker_title"
+                android:background="@color/colorAccent"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <TextView
+                android:id="@+id/date_picker_title"
+                android:layout_width="195dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:text="Pick a date"
+                android:textColor="#0E0800"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/houer_picker_layout"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/client_name_layout"
+            android:layout_alignBottom="@id/date_picker_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="-50dp"
+            android:background="@drawable/rounded_corner">
+
+            <ImageButton
+                android:id="@+id/clock2"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="293dp"
+                android:layout_marginLeft="293dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/colorAccent"
+                app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+            <TextView
+                android:id="@+id/houer_picker_title"
+                android:layout_width="195dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:text="Pick an houer"
+                android:textColor="#0E0800"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/web"
+            android:layout_width="336dp"
+            android:layout_height="142dp"
+            android:layout_above="@+id/button"
+            android:layout_below="@+id/houer_picker_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="37dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="178dp"
+            android:layout_marginBottom="121dp"
+            android:background="@drawable/rounded_corner">
+
+            <TextView
+                android:id="@+id/cancellation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:text="I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount."
+                android:textColor="#710E40"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/agree"
+                android:layout_width="89dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cancellation"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:text="agree"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

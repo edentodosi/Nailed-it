@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Nail_it</string>
+    <string name="app_name">Nail it</string>
     <string-array name="nail_option">
-        <item>Gel nail polish - 50 ILS</item>
         <item>Regular nail polish - 30 ILS</item>
+        <item>Gel nail polish - 50 ILS</item>
         <item>Acrylic nail polish - 120 ILS</item>
         <item>Nail polish remover - 10 ILS</item>
     </string-array>
