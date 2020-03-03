@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 int nailPolishType = mySpinner.getSelectedItemPosition();
 
                 Intent i=new Intent(MainActivity.this,Schedule_time.class);
-                //openActivity2();
                 st=et.getText().toString();
                 i.putExtra("value",st);
                 i.putExtra("nailPolish", nailPolishType);

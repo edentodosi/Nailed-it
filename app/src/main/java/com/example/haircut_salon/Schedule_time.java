@@ -31,7 +31,7 @@ public class Schedule_time extends AppCompatActivity {
         st=getIntent().getStringExtra("value");
         tv.setText("Hey " +st +", pick your wanted time");
 
-        TextView priceTv = findViewById(R.id.order_price);
+        TextView priceTv = findViewById(R.id.price_summary);
         int nailType=getIntent().getIntExtra("nailPolish", 0);
         int price = nailOptions[nailType].getPrice();
         priceTv.setText("Order price: " +String.valueOf(price));
