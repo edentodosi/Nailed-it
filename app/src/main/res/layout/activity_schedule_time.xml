@@ -183,8 +183,8 @@
 
         <RelativeLayout
             android:id="@+id/web"
-            android:layout_width="336dp"
-            android:layout_height="142dp"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/button"
             android:layout_below="@+id/houer_picker_layout"
             android:layout_alignParentStart="true"
@@ -193,7 +193,7 @@
             android:layout_marginStart="37dp"
             android:layout_marginLeft="37dp"
             android:layout_marginTop="178dp"
-            android:layout_marginBottom="121dp"
+            android:layout_marginBottom="103dp"
             android:background="@drawable/rounded_corner">
 
             <TextView
@@ -213,11 +213,12 @@
 
             <CheckBox
                 android:id="@+id/agree"
-                android:layout_width="89dp"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cancellation"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="5dp"
                 android:text="agree"
                 android:textSize="18sp"
                 android:textStyle="bold" />

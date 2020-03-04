@@ -168,6 +168,7 @@
                 android:layout_marginTop="49dp"
                 android:layout_marginEnd="93dp"
                 android:layout_marginRight="93dp"
+                app:srcCompat="@drawable/colorpicker"
                 tools:srcCompat="@drawable/colorpicker" />
 
             <RelativeLayout
