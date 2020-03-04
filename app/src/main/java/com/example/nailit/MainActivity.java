@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText et;
     String st;
     String selection;
-
+    int nailColor = -1;
     Bitmap bitmap;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -61,47 +61,38 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     int b= Color.blue(pixel);
 
                     //set BG color according to choosen color
-                    mcolorView.setBackgroundColor(Color.rgb(r,g,b));
+                    nailColor = Color.rgb(r,g,b);
+                    mcolorView.setBackgroundColor(nailColor);
                 }
                 return true;
             }
         });
-
-        //ImageButton buttonLoadImage = (ImageButton) findViewById(R.id.imageButton4);
-        //buttonLoadImage.setOnClickListener(new View.OnClickListener() {
-
-        //   @Override
-        //  public void onClick(View arg0) {
-
-        //  Intent i = new Intent(
-        //          Intent.ACTION_PICK,
-        //            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-        //      startActivityForResult(i, RESULT_LOAD_IMAGE);
-        //    }
-        //});
 
         button= (Button) findViewById(R.id.next_button);
         et= findViewById(R.id.client_name_input);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                st=et.getText().toString();
+                if(st.isEmpty() || nailColor == -1){
+                    String errorMsg = st.isEmpty() ? "Please enter name first" : "Please choose nail color";
+                    Toast toast = Toast.makeText(v.getContext(), errorMsg, Toast.LENGTH_LONG);
+                    TextView toastView = (TextView) toast.getView().findViewById(android.R.id.message);
+                    toastView.setTextColor(Color.RED);
+                    toast.show();
+                    return;
+                }
+
                 Spinner mySpinner = (Spinner) findViewById(R.id.nail_type_spinner);
                 int nailPolishType = mySpinner.getSelectedItemPosition();
 
                 Intent i=new Intent(MainActivity.this,Schedule_time.class);
-                st=et.getText().toString();
                 i.putExtra("value",st);
                 i.putExtra("nailPolish", nailPolishType);
                 startActivity(i);
             }
         });
     }
-
-    //public void openActivity2(){
-    //Intent intent= new Intent(this, Schedule_time.class);
-     //   startActivity(intent);}
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -118,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         parent.setSelection(position);
-        //Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
     }
 
     @Override

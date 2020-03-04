@@ -182,30 +182,26 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/web"
+            android:id="@+id/agree_layout"
             android:layout_width="344dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/button"
-            android:layout_below="@+id/houer_picker_layout"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="37dp"
-            android:layout_marginLeft="37dp"
-            android:layout_marginTop="178dp"
-            android:layout_marginBottom="103dp"
+            android:layout_marginTop="122dp"
+            android:layout_marginBottom="107dp"
             android:background="@drawable/rounded_corner">
 
             <TextView
                 android:id="@+id/cancellation"
-                android:layout_width="wrap_content"
+                android:layout_width="294dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:minHeight="20dp"
                 android:text="I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount."
                 android:textColor="#710E40"
                 android:textSize="18sp"
@@ -213,15 +209,23 @@
 
             <CheckBox
                 android:id="@+id/agree"
-                android:layout_width="115dp"
+                android:layout_width="94dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cancellation"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="222dp"
+                android:layout_marginRight="222dp"
+                android:minHeight="20dp"
                 android:text="agree"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="visible" />
         </RelativeLayout>
 
     </RelativeLayout>
