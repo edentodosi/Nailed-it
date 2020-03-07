@@ -6,4 +6,17 @@
         <item>Acrylic nail polish - 120 ILS</item>
         <item>Nail polish remover - 10 ILS</item>
     </string-array>
+    <string name="customername">Enter your name</string>
+    <string name="choose">Choose nail polish</string>
+    <string name="color">Choose nail polish color</string>
+    <string name="next">NEXT</string>
+    <string name="date">Pick a date</string>
+    <string name="hour">Pick an hour</string>
+    <string name="fullname">Full name</string>
+    <string name="go">GO</string>
+    <string name="agree">agree</string>
+    <string name="call">call us</string>
+    <string name="email">E-mail us special requests</string>
+    <string name="web">Search for recommendation</string>
+    <string name="cancelation">I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount</string>
 </resources>

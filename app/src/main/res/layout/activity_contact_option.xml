@@ -54,18 +54,18 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="3dp"
                 android:background="@color/colorAccent"
-                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+                app:srcCompat="@android:drawable/ic_dialog_email" />
 
             <TextView
                 android:id="@+id/houer_picker_title_contact"
-                android:layout_width="195dp"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="false"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Our location"
+                android:text="@string/email"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -96,7 +96,7 @@
                 android:layout_toEndOf="@+id/date_picker_title_contact"
                 android:layout_toRightOf="@+id/date_picker_title_contact"
                 android:background="@color/colorAccent"
-                app:srcCompat="@android:drawable/stat_sys_speakerphone" />
+                app:srcCompat="@android:drawable/ic_menu_call" />
 
             <TextView
                 android:id="@+id/date_picker_title_contact"
@@ -107,7 +107,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Call us"
+                android:text="@string/call"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -151,7 +151,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Search for recommendation"
+                android:text="@string/web"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />

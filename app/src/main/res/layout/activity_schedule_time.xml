@@ -39,7 +39,7 @@
             android:layout_marginRight="144dp"
             android:layout_marginBottom="58dp"
             android:background="@drawable/custom_button"
-            android:text="GO"
+            android:text="@string/go"
             android:textColor="#FFF"
             android:textStyle="bold" />
 
@@ -129,7 +129,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Pick a date"
+                android:text="@string/date"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -174,7 +174,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:text="Pick an houer"
+                android:text="@string/hour"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -202,7 +202,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="6dp"
                 android:minHeight="20dp"
-                android:text="I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount."
+                android:text="@string/cancelation"
                 android:textColor="#710E40"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -222,7 +222,7 @@
                 android:layout_marginEnd="222dp"
                 android:layout_marginRight="222dp"
                 android:minHeight="20dp"
-                android:text="agree"
+                android:text="@string/agree"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="visible" />

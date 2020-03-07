@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nail it</string>
+    <string name="choose">בחרי לק</string>
+    <string name="name">הכניסי את שמך</string>
+    <string name="next">הבא</string>
+    <string name="nailpolishcolor" translatable="false">בחרי צבע לק</string>
+    <string name="go">סיים</string>
+    <string name="date">בחרי תאריך</string>
+    <string name="hour">בחרי שעה</string>
+    <string name="agree">מסכימה</string>
+    <string name="fullname">שם מלא</string>
+    <string name="cancelation">אני מודעת לכך שביטול יתקבל עד- 24 שעות לפני המועד שנקבע. לאחר מכך תחויבי באופן מלא על כל הסכום</string>
+    <string name="call">התקשרי אלינו</string>
+    <string name="email">איימיל</string>
+    <string name="web">להמלצות</string>
+    <string name="color">בחרי צבע לק</string>
+    <string name="customername">הכניסי את שמך</string>
+</resources>

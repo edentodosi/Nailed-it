@@ -39,7 +39,7 @@
             android:layout_marginRight="144dp"
             android:layout_marginBottom="58dp"
             android:background="@drawable/custom_button"
-            android:text="NEXT"
+            android:text="@string/next"
             android:textColor="#FFF"
             android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="69dp"
                 android:layout_marginRight="69dp"
-                android:text="Enter your name"
+                android:text="@string/customername"
                 android:textColor="#050300"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -123,7 +123,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="9dp"
-                android:text="Choose nail polish"
+                android:text="@string/choose"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -148,7 +148,7 @@
                 android:layout_marginTop="9dp"
                 android:background="@drawable/rounded_corner"
                 android:paddingLeft="10dp"
-                android:text="Choose nail polish color"
+                android:text="@string/color"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -193,6 +193,28 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="57dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/color_picker"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp">
+
+            <ImageButton
+                android:id="@+id/local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounded_corner"
+                app:srcCompat="@android:drawable/ic_menu_manage" />
         </RelativeLayout>
 
     </RelativeLayout>
