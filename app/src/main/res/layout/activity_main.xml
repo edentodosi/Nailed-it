@@ -195,28 +195,6 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="57dp"
-            android:layout_height="60dp"
-            android:layout_below="@+id/color_picker"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="99dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
-            android:layout_marginBottom="6dp">
-
-            <ImageButton
-                android:id="@+id/local"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/rounded_corner"
-                app:srcCompat="@android:drawable/ic_menu_manage" />
-        </RelativeLayout>
-
     </RelativeLayout>
 
 </RelativeLayout>
