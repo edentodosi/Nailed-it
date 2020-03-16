@@ -59,36 +59,40 @@ public class Schedule_time extends AppCompatActivity {
         ImageButton bt=(ImageButton)findViewById(R.id.imageButton2);
         htv=(TextView)findViewById(R.id.houer_picker_title);
         ImageButton hbt=(ImageButton)findViewById(R.id.clock2);
-
-        hbt.setOnClickListener(new View.OnClickListener() {
+        bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar c=Calendar.getInstance();
-                int day=c.get(Calendar.DAY_OF_MONTH);
-                int month=c.get(Calendar.MONTH);
-                int year=c.get(Calendar.YEAR);
-                DatePickerDialog dpd=new DatePickerDialog(Schedule_time.this, new DatePickerDialog.OnDateSetListener() {
+                Calendar c = Calendar.getInstance();
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+                DatePickerDialog dpd = new DatePickerDialog(Schedule_time.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        mtv.setText(dayOfMonth+"/"+ (month+1) + "/"+ year);
+                        mtv.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
                     }
-                },day,month,year);
+                }, year,month, day);
                 dpd.show();
-
-                int hour=c.get(Calendar.HOUR_OF_DAY);
-                int minutes=c.get(Calendar.MINUTE);
-                TimePickerDialog tpd=new TimePickerDialog(Schedule_time.this, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        htv.setText(hourOfDay+":"+ minute);
-                    }
-                },hour,minutes,true);
-                tpd.show();
             }
-
         });
 
-    }
+        hbt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Calendar c = Calendar.getInstance();
+                    int hour=c.get(Calendar.HOUR_OF_DAY);
+                    int minutes=c.get(Calendar.MINUTE);
+                    TimePickerDialog tpd=new TimePickerDialog(Schedule_time.this, new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                            htv.setText(hourOfDay+":"+ minute);
+                        }
+                    },hour,minutes,true);
+                    tpd.show();
+                }
+            });
+
+        }
         public void openActivity3(){
             CheckBox agree = findViewById(R.id.agree);
             if(!agree.isChecked()){
@@ -102,4 +106,4 @@ public class Schedule_time extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-}
+    }

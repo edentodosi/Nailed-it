@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v) {
                 st=et.getText().toString();
-                if(st.isEmpty() || nailColor == -1){
+                if(st.isEmpty() || nailColor != 111){
                     String errorMsg = st.isEmpty() ? "Please enter name first" : "Please choose nail color";
                     Toast toast = Toast.makeText(v.getContext(), errorMsg, Toast.LENGTH_LONG);
                     TextView toastView = (TextView) toast.getView().findViewById(android.R.id.message);
@@ -88,6 +88,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             rl.removeAllViews();
 
             int numberOfButtons = position + 1;
+            this.nailColor = 0;
+            if(numberOfButtons == 2){
+                this.nailColor = 100;
+            }
+            if(numberOfButtons == 1){
+                this.nailColor = 110;
+            }
             for(int i =0 ; i <  numberOfButtons; i++){
                 Button btn = new Button(this);
                 btn.setId(BASE_ID_NUMBER + i);
@@ -133,9 +140,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 int b = Color.blue(pixel);
 
                 //set BG color according to choosen color
-                nailColor = Color.rgb(r, g, b);
+                int choosenColor = Color.rgb(r, g, b);
                 Button button = (Button) findViewById(lastColorPickerClicked);
-                button.setBackgroundColor(nailColor);
+                button.setBackgroundColor(choosenColor);
+
+                if(lastColorPickerClicked - this.BASE_ID_NUMBER == 0){
+                    if(this.nailColor % 10 == 0){
+                        this.nailColor += 1;
+                    }
+                }
+
+                if(lastColorPickerClicked - this.BASE_ID_NUMBER == 1){
+                    if(this.nailColor / 10 % 10 == 0){
+                        this.nailColor += 10;
+                    }
+                }
+
+                if(lastColorPickerClicked - this.BASE_ID_NUMBER == 2){
+                    if(this.nailColor / 100 == 0){
+                        this.nailColor += 100;
+                    }
+                }
             }
         }
         catch(IllegalArgumentException ex){
