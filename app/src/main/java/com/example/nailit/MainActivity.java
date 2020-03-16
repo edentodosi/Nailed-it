@@ -18,18 +18,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener
-{    private static int RESULT_LOAD_IMAGE = 1111;
-
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener, View.OnTouchListener {
     private Button button;
     EditText et;
     String st;
-    String selection;
     int nailColor = -1;
+    int BASE_ID_NUMBER = 998899;
+    int lastColorPickerClicked = BASE_ID_NUMBER;
     Bitmap bitmap;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -41,32 +41,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner_nail.setSelection(0);
         spinner_nail.setOnItemSelectedListener(this);
 
+        Spinner color_spinner=findViewById(R.id.nail_color_count_spinner);
+        color_spinner.setSelection(0);
+        color_spinner.setOnItemSelectedListener(this);
+
         final ImageView mImageview=findViewById(R.id.imageView2);
         final View mcolorView=findViewById(R.id.colorview);
         mImageview.setDrawingCacheEnabled(true);
         mImageview.buildDrawingCache(true);
 
         //Image view on touch listener
-        mImageview.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN || event.getAction()== MotionEvent.ACTION_MOVE){
-                    bitmap=mImageview.getDrawingCache();
-
-                    int pixel=bitmap.getPixel((int)event.getX(),(int)event.getY());
-
-                    //getting RGB values
-                    int r= Color.red(pixel);
-                    int g= Color.green(pixel);
-                    int b= Color.blue(pixel);
-
-                    //set BG color according to choosen color
-                    nailColor = Color.rgb(r,g,b);
-                    mcolorView.setBackgroundColor(nailColor);
-                }
-                return true;
-            }
-        });
+        mImageview.setOnTouchListener(this);
 
         button= (Button) findViewById(R.id.next_button);
         et= findViewById(R.id.client_name_input);
@@ -95,23 +80,67 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        parent.setSelection(position);
 
-        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
-            Uri selectedImage = data.getData();
+        if(parent.getId() == R.id.nail_color_count_spinner){
+            RelativeLayout rl = (RelativeLayout)findViewById(R.id.colorview);
+            rl.removeAllViews();
 
-            ImageView imageView = (ImageView) findViewById(R.id.imageView2);
-            imageView.setImageURI(selectedImage);
+            int numberOfButtons = position + 1;
+            for(int i =0 ; i <  numberOfButtons; i++){
+                Button btn = new Button(this);
+                btn.setId(BASE_ID_NUMBER + i);
+                RelativeLayout.LayoutParams rlparams = new RelativeLayout.LayoutParams(rl.getWidth()/ numberOfButtons, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                rlparams.bottomMargin = 3;
+                rlparams.topMargin = 3;
+
+                if( i !=0) {
+                    rlparams.addRule(RelativeLayout.RIGHT_OF,BASE_ID_NUMBER + i - 1);
+                }
+                else {
+                    rlparams.leftMargin = 0;
+                }
+                btn.setLayoutParams(rlparams);
+                btn.setOnClickListener(this);
+                rl.addView(btn);
+            }
         }
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        parent.setSelection(position);
+    public void onNothingSelected(AdapterView<?> parent) {
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+    public void onClick(View v) {
+        this.lastColorPickerClicked = v.getId();
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        final ImageView mImageview=findViewById(R.id.imageView2);
+
+        try {
+            if (event.getAction() == MotionEvent.ACTION_DOWN || event.getAction() == MotionEvent.ACTION_MOVE) {
+                bitmap = mImageview.getDrawingCache();
+
+                int pixel = bitmap.getPixel((int) event.getX(), (int) event.getY());
+
+                //getting RGB values
+                int r = Color.red(pixel);
+                int g = Color.green(pixel);
+                int b = Color.blue(pixel);
+
+                //set BG color according to choosen color
+                nailColor = Color.rgb(r, g, b);
+                Button button = (Button) findViewById(lastColorPickerClicked);
+                button.setBackgroundColor(nailColor);
+            }
+        }
+        catch(IllegalArgumentException ex){
+            //ignore on error of outside the box
+        }
+        return true;
     }
 }

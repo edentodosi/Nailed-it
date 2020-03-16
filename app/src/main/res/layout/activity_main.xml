@@ -145,13 +145,24 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="false"
                 android:layout_centerVertical="true"
-                android:layout_marginTop="9dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/rounded_corner"
                 android:paddingLeft="10dp"
                 android:text="@string/color"
                 android:textColor="#0E0800"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/nail_color_count_spinner"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/polish_option5"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="-25dp"
+                android:background="@drawable/rounded_corner"
+                android:entries="@array/nail_color_option"
+                android:textColor="#FF0000" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -174,24 +185,10 @@
             <RelativeLayout
                 android:id="@+id/colorview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_alignBottom="@id/imageView2"
-                android:layout_marginBottom="-59dp"
-                android:background="@drawable/rounded_corner">
-
-                <TextView
-                    android:id="@+id/choosen_color"
-                    android:layout_width="178dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginLeft="9dp"
-                    android:layout_marginEnd="114dp"
-                    android:layout_marginRight="114dp"
-                    android:layout_marginBottom="12dp"
-                    android:textColor="#0F0000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+                android:layout_marginBottom="-62dp"
+                android:background="@drawable/rounded_corner" />
 
         </RelativeLayout>
 
