@@ -14,4 +14,5 @@
     <string name="web">להמלצות</string>
     <string name="color">בחרי כמה ואילו צבעי לק</string>
     <string name="customername">הכניסי את שמך</string>
+    <string name="current_weather">מזג האוויר אצלנו הוא</string>
 </resources>

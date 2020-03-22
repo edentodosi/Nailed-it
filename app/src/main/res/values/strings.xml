@@ -4,7 +4,6 @@
         <item>Regular nail polish - 30 ILS</item>
         <item>Gel nail polish - 50 ILS</item>
         <item>Acrylic nail polish - 120 ILS</item>
-        <item>Nail polish remover - 10 ILS</item>
     </string-array>
 
     <string-array name="nail_color_option">
@@ -25,4 +24,5 @@
     <string name="email">E-mail us special requests</string>
     <string name="web">Search for recommendation</string>
     <string name="cancelation">I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount</string>
+    <string name="current_weather">Current weather in our place is: </string>
 </resources>
