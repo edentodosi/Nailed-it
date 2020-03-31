@@ -182,32 +182,32 @@
 
         <RelativeLayout
             android:id="@+id/weahter_layout"
-            android:layout_width="344dp"
-            android:layout_height="wrap_content"
+            android:layout_width="341dp"
+            android:layout_height="88dp"
             android:layout_below="@+id/client_name_layout"
             android:layout_alignBottom="@id/hour_picker_layout"
             android:layout_centerInParent="true"
             android:layout_marginTop="118dp"
-            android:layout_marginBottom="-59dp"
+            android:layout_marginBottom="-104dp"
             android:background="@drawable/rounded_corner">
 
             <ImageButton
                 android:id="@+id/W"
-                android:layout_width="29dp"
-                android:layout_height="29dp"
+                android:layout_width="47dp"
+                android:layout_height="52dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="293dp"
-                android:layout_marginLeft="293dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="145dp"
+                android:layout_marginRight="145dp"
                 android:layout_marginBottom="3dp"
                 android:background="@color/colorAccent"
-                app:srcCompat="@android:drawable/star_on" />
+                app:srcCompat="@drawable/iconw" />
 
             <TextView
                 android:id="@+id/weahter_title"
