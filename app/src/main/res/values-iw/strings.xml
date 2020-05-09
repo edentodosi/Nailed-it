@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="nail_option">
-        <item>לק פוליש רגיל - 30 ש"ח</item>
+        <item>לק רגיל - 30 ש"ח</item>
         <item>לק גל - 50 ש"ח</item>
         <item>לק אקרילי - 120 ש"ח</item>
     </string-array>
