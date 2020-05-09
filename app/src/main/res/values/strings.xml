@@ -29,4 +29,8 @@
     <string name="Hey">Hey,</string>
     <string name="date_picker">pick your wanted time</string>
     <string name="order_price">"order price: "</string>
+    <string name="agree_terms_error">You must agree the terms first</string>
+    <string name="validate_date_houer_error">Please make sure you choose date and hour</string>
+    <string name="enter_name_error">Please enter name first</string>
+    <string name="choose_all_colors_error">Please choose all wanted nail colors</string>
 </resources>

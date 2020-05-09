@@ -25,4 +25,8 @@
     <string name="Hey">היי,</string>
     <string name="date_picker">בחר/י את הזמן הרצוי לתור</string>
     <string name="order_price">"מחיר: "</string>
+    <string name="agree_terms_error">חייב להסכים לתנאים על מנת להמשיך</string>
+    <string name="validate_date_houer_error">נא ודא/י שבחר/ת תאריך ושעה</string>
+    <string name="enter_name_error">אנא הכניס/י שם קודם</string>
+    <string name="choose_all_colors_error">אנא בחר/י את כל צבעי הלק הרצויים</string>
 </resources>

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
                 st=et.getText().toString();
                 if(st.isEmpty() || nailColor != 111){
-                    String errorMsg = st.isEmpty() ? "Please enter name first" : "Please choose nail color";
+                    String errorMsg = st.isEmpty() ? getResources().getString(R.string.enter_name_error):  getResources().getString(R.string.choose_all_colors_error);
                     Toast toast = Toast.makeText(v.getContext(), errorMsg, Toast.LENGTH_LONG);
                     TextView toastView = (TextView) toast.getView().findViewById(android.R.id.message);
                     toastView.setTextColor(Color.RED);

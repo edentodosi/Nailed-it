@@ -111,7 +111,16 @@ public class Schedule_time extends AppCompatActivity {
     public void openActivity3(){
         CheckBox agree = findViewById(R.id.agree);
         if(!agree.isChecked()){
-            Toast toast = Toast.makeText(this, "You must agree the terms first", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, getResources().getString(R.string.agree_terms_error), Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.show();
+            return;
+        }
+        String hour = htv.getText().toString();
+        String date = mtv.getText().toString();
+        if(hour == getResources().getString(R.string.hour) || date == getResources().getString(R.string.date)){
+            Toast toast = Toast.makeText(this,  getResources().getString(R.string.validate_date_houer_error), Toast.LENGTH_LONG);
             TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
             v.setTextColor(Color.RED);
             toast.show();
