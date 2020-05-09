@@ -57,13 +57,12 @@ public class Schedule_time extends AppCompatActivity {
         tv=findViewById(R.id.client_title_name);
         weatherTv = findViewById(R.id.weahter_title);
         st=getIntent().getStringExtra("value");
-        //getResources().getString(R.string.);
-        tv.setText("Hey " + st +", pick your wanted time");
+        tv.setText(getResources().getString(R.string.Hey) + st +", " + getResources().getString(R.string.date_picker));
 
         TextView priceTv = findViewById(R.id.price_summary);
         int nailType=getIntent().getIntExtra("nailPolish", 0);
         int price = nailOptions[nailType].getPrice();
-        priceTv.setText("Order price: " + String.valueOf(price));
+        priceTv.setText(getResources().getString(R.string.order_price) + String.valueOf(price));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

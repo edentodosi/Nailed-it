@@ -89,7 +89,7 @@
                 android:layout_marginRight="87dp"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="Full name"
+                android:hint="@string/full_name"
                 android:inputType="textPersonName"
                 android:minHeight="10dp"
                 android:textStyle="bold" />

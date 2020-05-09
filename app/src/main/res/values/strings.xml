@@ -24,5 +24,9 @@
     <string name="email">E-mail us special requests</string>
     <string name="web">Search for recommendation</string>
     <string name="cancelation">I am aware that cancellation will be accepted up to 24 hours before the scheduled time. You will then be fully charged for the entire amount</string>
-    <string name="current_weather">Current weather in our place is: </string>
+    <string name="current_weather">"Current weather in our place is:  "</string>
+    <string name="full_name">Full Name</string>
+    <string name="Hey">Hey,</string>
+    <string name="date_picker">pick your wanted time</string>
+    <string name="order_price">"order price: "</string>
 </resources>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="nail_option">
+        <item>לק פוליש רגיל - 30 ש"ח</item>
+        <item>לק גל - 50 ש"ח</item>
+        <item>לק אקרילי - 120 ש"ח</item>
+    </string-array>
+
     <string name="app_name">Nail it</string>
     <string name="choose">בחרי לק</string>
     <string name="next">הבא</string>
@@ -14,5 +20,9 @@
     <string name="web">להמלצות</string>
     <string name="color">בחרי כמה ואילו צבעי לק</string>
     <string name="customername">הכניסי את שמך</string>
-    <string name="current_weather">מזג האוויר אצלנו הוא</string>
+    <string name="current_weather">"מזג האוויר אצלנו הוא:  "</string>
+    <string name="full_name">שם מלא</string>
+    <string name="Hey">היי,</string>
+    <string name="date_picker">בחר/י את הזמן הרצוי לתור</string>
+    <string name="order_price">"מחיר: "</string>
 </resources>
