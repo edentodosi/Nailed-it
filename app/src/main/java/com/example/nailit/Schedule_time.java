@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.renderscript.Sampler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -22,7 +21,6 @@ import com.example.nailit.NailTypes.AcrylicPolish;
 import com.example.nailit.NailTypes.Gel;
 import com.example.nailit.NailTypes.INailOptions;
 import com.example.nailit.NailTypes.Polish;
-import com.example.nailit.NailTypes.PolishRemover;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,7 +46,7 @@ public class Schedule_time extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        EdensAsyncTask getWeather = new EdensAsyncTask();
+        WeatherAsyncTask getWeather = new WeatherAsyncTask();
         getWeather.execute("https://api.darksky.net/forecast/a9f37e081e9648fac0fbafde5cb379f0/32.016110,34.773010?units=auto");
 
         super.onCreate(savedInstanceState);
@@ -131,11 +129,11 @@ public class Schedule_time extends AppCompatActivity {
         finish();
     }
 
-    private class EdensAsyncTask extends AsyncTask<String, Integer, Double> {
+    private class WeatherAsyncTask extends AsyncTask<String, Integer, Double> {
         @Override
         protected Double doInBackground(String... params) {
             // call the server and return response
-            HttpURLConnection connection = null;
+           HttpURLConnection connection = null;
             BufferedReader reader = null;
             try {
                 URL url = new URL(params[0]);

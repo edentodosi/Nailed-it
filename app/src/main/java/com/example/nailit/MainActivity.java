@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //Image view on touch listener
         mImageview.setOnTouchListener(this);
 
+        //validate input before press next
         button= (Button) findViewById(R.id.next_button);
         et= findViewById(R.id.client_name_input);
         button.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     toast.show();
                     return;
                 }
-
+                //get value from spinner and position and send to next intent
                 Spinner mySpinner = (Spinner) findViewById(R.id.nail_type_spinner);
                 int nailPolishType = mySpinner.getSelectedItemPosition();
 
