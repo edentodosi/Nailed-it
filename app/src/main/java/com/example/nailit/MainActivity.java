@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 int g = Color.green(pixel);
                 int b = Color.blue(pixel);
 
-                //set BG color according to choosen color
+                //set RBG color according to choosen color
                 int choosenColor = Color.rgb(r, g, b);
                 Button button = (Button) findViewById(lastColorPickerClicked);
                 button.setBackgroundColor(choosenColor);
